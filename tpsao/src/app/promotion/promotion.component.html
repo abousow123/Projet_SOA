@@ -1,0 +1,66 @@
+<button class="btn btn-primary"  data-toggle="modal"
+data-target="#modalADD">Nouveau</button>
+<table class="responstable">
+  <tr>
+    <th>CODE</th>
+    <th data-th="details Etudiant"><span>PRENOM</span></th>
+    <th>NOM</th>
+	<th>EMAIL</th>
+	
+  </tr>
+  <tr *ngFor="let etudian of listes">
+    
+    
+	<td>{{etudian.etudants}}</td>
+	
+	<!--<td>{{etudiant.email}}</td> -->
+	
+  </tr>
+</table>
+
+<div class="modal fade" id="modalADD" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header" style="background-color: #167F92">
+						<h5 style="color: #fff" class="modal-title text-justify" id="exampleModalLabel">Nouveau Etudiant</h5>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form name="formSave">
+							<div class="form-group">
+								<label class="control-label"> Code etudiant: </label> <input
+									class="form-control" type="text" name="numeroetudiant"/>
+							</div>
+							<div class="form-group">
+								<label class="control-label"> Prenom: </label> <input
+									class="form-control" type="text" name="prenom"/>
+							</div>
+							<div class="form-group">
+								<label class="control-label"> Nom : </label> <input
+									class="form-control" type="text" name="nom"/>
+              </div>
+              <div class="form-group">
+								<label class="control-label"> Email : </label> <input
+									class="form-control" type="text" name="email"/>
+              </div>
+              <div class="form-group">
+								<label class="control-label"> Classe : </label> <input
+									class="form-control" type="text" name="annee"/>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer" >
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Close</button>
+						<button type="button"
+							onclick="document.forms['formSave'].submit()"
+							class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- fin  -->

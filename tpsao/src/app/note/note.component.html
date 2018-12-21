@@ -1,0 +1,47 @@
+
+
+<div>
+
+ 
+    
+
+    <div >
+      <h3>Etudiant</h3> 
+      <select
+          class="form-control"
+          [(ngModel)]="numetudiant" >
+
+          <option  *ngFor="let etudiant of listesEtudiant" value="{{etudiant.numeroetudiant}}"  ng-repeat="whitelabel in whitelabels track by whitelabel.WhiteLabel.id">
+              {{etudiant.numeroetudiant}}   {{etudiant.prenom}}  {{etudiant.nom}}
+          </option>
+      </select>
+    </div>
+
+    <div >
+      <h3>Evaluation</h3> 
+      <select           
+        class="form-control" 
+        [(ngModel)]="codeEval"
+      >
+       <option  *ngFor="let etudiant of listeEvaluations" value="{{etudiant.codeevaluation}}:" ng-repeat="whitelabel in whitelabels track by whitelabel.WhiteLabel.id">
+        {{etudiant.codeevaluation}}  {{etudiant.libelleevaluation}}
+        </option>
+    
+      </select>
+    </div>
+
+    <div >
+      <label class="control-label"> CODE NOTE : </label>
+      <input class="form-control" type="text" [(ngModel)]="notes.codenote" required/>
+    </div>
+
+    <div >
+      <label class="control-label"> NOTE : </label>
+      <input class="form-control" type="number" [(ngModel)]="notes.note" required/>
+    </div>
+
+   
+        <button  (click)="saveNote()" class="btn btn-primary"> Valider</button>
+  
+
+</div>

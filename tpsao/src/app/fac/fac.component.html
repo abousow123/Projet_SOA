@@ -1,0 +1,16 @@
+<button class="btn btn-primary"  data-toggle="modal"
+data-target="#modalADD" routerLink="/newfaculte">Nouveau</button>
+<table class="responstable">
+  <tr>
+    <th>CODE FACULTE</th>
+    <th data-th="details Etudiant"><span>LIBELLE CLASSE</span></th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let faculte of listeFacultes">
+    <td>{{faculte.codefaculte}}</td>
+    <td>{{faculte.libellefaculte}}</td>
+	<td><a (click)="routerEdite(faculte.codefaculte)" class="clickable btn btn-warning">Edit</a> <a (click)="routerDelete(faculte.codefaculte)" class="clickable btn btn-danger">delete</a></td>
+	
+  </tr>
+</table>
+

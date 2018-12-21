@@ -1,0 +1,27 @@
+
+
+		<button class="btn btn-primary"  data-toggle="modal"
+data-target="#modalADD" routerLink="/newEvaluation">Nouveau</button>
+<table class="responstable">
+  <tr>
+		<th>Code Evaluation</th>
+    
+    <th>Libelle Evaluation</th>
+    <th>Date Evaluation</th>
+    <th>Action</th>
+  </tr>
+	<tr *ngFor="let etudiant of listeEvaluations">
+    <td>{{etudiant.codeevaluation}}</td>
+    
+    <td>{{etudiant.libelleevaluation}}</td>
+    <td>{{etudiant.dateEvaluation}}</td>
+    <td><a (click)="routerNote(etudiant.codeevaluation)" class="clickable btn btn-warning">Saisir les notes</a> </td>
+  </tr>
+</table>
+
+
+
+
+
+
+	
